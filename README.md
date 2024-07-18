@@ -74,9 +74,15 @@ myNumber < 88;  // false
 
 # Chapter 2 - Link JS to HTML
 
+- on your machine (localhost), create a folder that will host your project
+- Launch VS code and open that folder
+- in VS code file explorer, create a new file and name it `index.html`
+- in the editor, type an exclamation mark to use an _Emmet_ Abbreviation that creates a minimal HTML document
+
+>[!tip]
+>Emmet Abbreviations are very useful in VS Code: https://docs.emmet.io/cheat-sheet/
 
 
 
 
-
-@8/475
+@10/475

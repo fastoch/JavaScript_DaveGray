@@ -95,6 +95,12 @@ Of course, there are many more methods & properties that can be used with string
 >[!important]
 >Methods require the use of parentheses at the end to be called into action, whereas properties don't.
 
+---
+
+# Chapter 4 - Numbers
+
+see file `chapter4.js`
+
 
 
 @22/475

@@ -5,7 +5,7 @@
 
 ---
 
-## Intro
+# Intro
 
 - JavaScript (JS) adds functionality and interactivity to the web!
 - JavaScript can make things happen when users interact with our web pages.
@@ -15,13 +15,15 @@
 I created this free 8 hour JavaScript course with 28 chapters to help you learn the fundamentals.  
 This is the stage where you truly begin to learn "web development".
 
-## Chapter 1 
+---
 
-### Comments 
+# Chapter 1 
+
+## Comments 
 
 A JS comment starts with 2 slashes `//`
 
-### Data Types
+## Data Types
 
 There are 4 basic data types:
 - string (double quotes or simple quotes)
@@ -34,14 +36,14 @@ We can use `typeof` to check the data type:
 - `typeof 42;` will return "number"
 - `typeof true;` will return "boolean"
 
-### Variables
+## Variables
 
 - We can define a variable with the keyword `let`: `let myVariable;`
 - since we did not assign any value to this variable, `typeof myVariable` will return "undefined"
 - to assign a value to this variable: `myVariable = "Dave";`
 - because we used the keyword `let` to initialize `myVariable`, we could _reassign_ its value: `myVariable = 16;`
 
-### Mathematics
+## Mathematics
 
 ```js
 let myNumber = 42;
@@ -50,17 +52,31 @@ myNumber * 2;  // 84
 myNumber / 2;  // 21
 myNumber % 2;  // modulo operator => 0
 myNumber = 44 * 2;  // assigns 88 to myNumber
-myNumber + myVariable;  // JS can concatenate a string and a number by automatically converting the number to a string => "88Dave"
+myNumber + myVariable;  // JS automatically converts 88 to "88" and concatenates the variables => "88Dave"
 ```
 
-### Comparisons
+## Comparisons
 
 ```js
 myVariable === myNumber;  // returns false 
-myNumber === 88;  // returns true 
+myNumber === 88;  // returns true
+let myBool = myNumber === 88;  // assigns true to myBool
+myNumber !== 88;  // false
+myNumber >= 88;  // false
+myNumber < 88;  // false
 ```
 
+## Hello World
+
+`alert("Hello World!");` generates a pop-up that says "Hello World!"
+
+---
+
+# Chapter 2 - Link JS to HTML
 
 
 
-@6/475
+
+
+
+@8/475

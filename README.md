@@ -82,7 +82,8 @@ myNumber < 88;  // false
 >[!tip]
 >Emmet Abbreviations are very useful in VS Code: https://docs.emmet.io/cheat-sheet/
 
-- Just like you link CSS to HTML with a `<link>` tag, you can link JS to HTML with a `<script>` tag: see file `chapter2.html`
+- Just like you link CSS to HTML with a `<link>` tag, you can link JS to HTML with a `<script>` tag
+- see file `chapter2.html`
 
 ---
 

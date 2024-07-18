@@ -89,10 +89,12 @@ myNumber < 88;  // false
 
 # Chapter 3 - Strings
 
-see file `chapter3.js`
+see file `chapter3.js`  
+Of course, there are many more methods & properties that can be used with strings.
 
 >[!important]
 >Methods require the use of parentheses at the end to be called into action, whereas properties don't.
+
 
 
 @22/475

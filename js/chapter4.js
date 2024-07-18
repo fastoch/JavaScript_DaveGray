@@ -31,5 +31,19 @@ console.log(Number.isInteger(myNumber)); // false
 console.log(Number.parseFloat("3.14")); // 3.14 
 console.log(Number.parseFloat("3.14abc")); // 3.14
 
+// The Number.parseInt() method parses a string and returns an integer
+console.log(Number.parseInt("16")); // 16
+console.log(Number.parseInt("16.7")); // 16
+console.log(Number.parseInt("16abc")); // 16
+console.log(Number.parseInt("abc16")); // NaN
+
 // The toFixed() method formats a number with a specified number of decimal places
 console.log((1234.56789).toFixed(2)); // "1234.57" (rounded up)
+
+// The toString() method returns a string representation of a number
+console.log((1234).toString()); // "1234"
+console.log((1234).toString(16)); // "4d2" (hexadecimal)
+console.log((1234).toString(8)); // "2322" (octal)
+console.log((1234).toString(2)); // "1111010010" (binary)
+
+// The valueOf() method returns the primitive value of a Number object

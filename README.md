@@ -91,7 +91,8 @@ myNumber < 88;  // false
 
 see file `chapter3.js`
 
-
+>[!important]
+>methods require the use of parentheses while properties don't
 
 
 @22/475

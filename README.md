@@ -82,7 +82,7 @@ myNumber < 88;  // false
 >[!tip]
 >Emmet Abbreviations are very useful in VS Code: https://docs.emmet.io/cheat-sheet/
 
-- Just like you link CSS to HTML with a `<style>` tag, you can link JS to HTML with a `<script>` tag:
+- Just like you link CSS to HTML with a `<link>` tag, you can link JS to HTML with a `<script>` tag:
 ```html
 <!DOCTYPE html>
 <html lang="en">
@@ -103,9 +103,20 @@ myNumber < 88;  // false
 
 # Chapter 3 - Strings
 
+```js
+const myVar = "Mathematics";
+
+// The length property returns the number of characters in a string
+console.log(myVar.length); // Output: 11
+
+// The charAt() method returns the character at the specified index (0-based)
+console.log(myVar.charAt(0)); // Output: M
+
+// The indexOf() method returns the index of the first occurrence of a specified value in a string
+console.log(myVar.indexOf("a")); // Output: 1
+```
 
 
 
 
-
-@16/475
+@20/475

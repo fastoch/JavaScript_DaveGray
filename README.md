@@ -103,7 +103,7 @@ see file `chapter3.js`
 see file `chapter4.js`  
 
 - if we use the `Number()` function on data that cannot be converted to a number, it will return `NaN`, which is an acronym for Not a Number.
-- 
+- The `toFixed()` method returns string data, not number data
 
 
-@25/475
+@26/475

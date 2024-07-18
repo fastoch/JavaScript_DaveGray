@@ -38,10 +38,12 @@ We can use `typeof` to check the data type:
 
 - We can define a variable with the keyword `let`: `let myVariable;`
 - since we did not assign any value to this variable, `typeof myVariable` will return "undefined"
+- to assign a value: `myVariable = "Dave";`
+- because we used the keyword `let` to initialize `myVariable`, we can _reassign_ its value: `myVariable = 16;`
 - 
 
 
 
 
 
-@2/475
+@3/475

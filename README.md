@@ -90,7 +90,8 @@ myNumber < 88;  // false
 # Chapter 3 - Strings
 
 see file `chapter3.js`  
-Of course, there are many more methods & properties that can be used with strings.
+
+- Of course, there are many more methods & properties that can be used with strings.
 
 >[!important]
 >Methods require the use of parentheses at the end to be called into action, whereas properties don't.
@@ -99,8 +100,10 @@ Of course, there are many more methods & properties that can be used with string
 
 # Chapter 4 - Numbers
 
-see file `chapter4.js`
+see file `chapter4.js`  
 
+- if we use the `Number()` function on data that cannot be converted to a number, it will return `NaN`, which is an acronym for Not a Number.
+- 
 
 
 @25/475

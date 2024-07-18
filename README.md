@@ -92,7 +92,7 @@ myNumber < 88;  // false
 see file `chapter3.js`
 
 >[!important]
->methods require the use of parentheses while properties don't
+>Methods require the use of parentheses at the end to be called into action, whereas properties don't.
 
 
 @22/475

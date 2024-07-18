@@ -25,17 +25,20 @@ A JS comment starts with 2 slashes `//`
 
 There are 4 basic data types:
 - string (double quotes or simple quotes)
-- 
+- number
+- boolean (true or false)
+- undefined: a variable that has not been assigned a value is of type `undefined`
 
 We can use `typeof` to check the data type: 
 - `typeof "Dave";` will return "string"
 - `typeof 42;` will return "number"
 - `typeof true;` will return "boolean"
-- 
 
 ### Variables
 
-We can define a variable with the keyword `let`: `let myVariable;`
+- We can define a variable with the keyword `let`: `let myVariable;`
+- since we did not assign any value to this variable, `typeof myVariable` will return "undefined"
+- 
 
 
 

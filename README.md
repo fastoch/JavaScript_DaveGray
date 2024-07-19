@@ -111,4 +111,12 @@ see file `chapter4.js`
 
 see file `chapter5.js`  
 
-@28/475
+---
+
+# Chapter 6 - Code challenge
+
+see file `chapter6.js`  
+
+
+
+@33/475

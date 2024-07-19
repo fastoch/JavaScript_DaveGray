@@ -105,5 +105,10 @@ see file `chapter4.js`
 - if we use the `Number()` function on data that cannot be converted to a number, it will return `NaN`, which is an acronym for Not a Number.
 - The `toFixed()` method returns string data, not number data
 
+---
 
-@26/475
+# Chapter 5 - Math Methods
+
+
+
+@28/475

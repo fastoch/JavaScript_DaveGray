@@ -1,4 +1,3 @@
-
 // Numbers
 
 const myInteger = 42;

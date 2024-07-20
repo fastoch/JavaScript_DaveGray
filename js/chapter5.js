@@ -11,5 +11,8 @@ console.log(Math.pow(2, 3)); // Output: 8 (base number, exponent)
 console.log(Math.min(5, 10, 15, 20, 25)); // 5
 console.log(Math.max(5, 10, 15, 20, 25)); // 25
 
-console.log(Math.random()); // Output: a pseudorandom number between 0 and 1
-console.log(Math.ceil(Math.random() * 10)); // random integer between 1 and 10
+console.log(Math.random()); // Output: a pseudo-random number between 0 (included) and 1 (excluded)
+console.log(Math.ceil(Math.random() * 10)); // random integer between 1 and 10 (slim chance of getting 0)
+
+// to avoid returning zero when using random()
+console.log(Math.floor(Math.random() * 10) + 1); // random integer between 1 and 10 (no risk of getting 0)

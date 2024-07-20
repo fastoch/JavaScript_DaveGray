@@ -3,8 +3,8 @@
 // syntax:
 // condition ? ifTrue run this : ifFalse run that;
 
-let question = "Is it raining outside?";
-let response = yes ? "Take your umbrella." : "No need for an umbrella.";
+let soup = "chicken noodle soup";
+let response = soup? `Here's your order of ${soup}.` : "Sorry, we're out of soup.";
 console.log(response);
 
 // we can chain ternary operators:

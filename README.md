@@ -117,6 +117,11 @@ see file `chapter5.js`
 
 see file `chapter6.js`  
 
+---
+
+# Chapter 7 - if statements
+
+see file `chapter7.js` 
 
 
 @42/475

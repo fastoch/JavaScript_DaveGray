@@ -1,5 +1,6 @@
 // if statements
 
+// Example 1
 let customerIsBanned = true;
 let soup = "chicken noodle soup";
 let crackers = true;
@@ -19,8 +20,7 @@ if (customerIsBanned) {
 
 console.log(reply);
 
-// Another example of if statement
-
+// Example 2
 let testScore = 85;
 let collegeStudent = true;
 let grade;
@@ -43,19 +43,26 @@ if (testScore >= 90) {
 console.log(`Your grade is ${grade}.`);
 
 // now a classic exercise: chifoumi game
-let playerChoice;
-let computerChoice;
-
-print("Choose rock, paper, or scissors: ");
-playerChoice = input().toLowerCase();
-
-if (playerChoice !== "rock" && playerChoice!== "paper" && playerChoice!== "scissors") {
-    console.log("Invalid choice. Please choose rock, paper, or scissors.");
-    return;
-}
-
-if (playerChoice === computerChoice) {
-    console.log("It's a tie!");
-} else if (playerChoice === "rock" && computerChoice === "scissors") {
-    console.log("You win!");
+if (player1 === computer) {
+    // tie game!
+} else if (player1 === "rock") {
+    if (computer === "paper") {
+        // computer wins!
+    } else {
+        // player 1 wins!
+    } 
+} else if (player1 === "paper") {
+    if (computer === "scissors") {
+        // computer wins!
+    } else {
+        // player 1 wins!
+    } 
+} else if (player1 === "scissors") {
+    if (computer === "rock") {
+        // computer wins!
+    } else {
+        // player 1 wins!
+    } 
+} else {
+    console.log("Invalid input. Please enter rock, paper, or scissors.");
 }

@@ -42,7 +42,7 @@ if (testScore >= 90) {
 }
 console.log(`Your grade is ${grade}.`);
 
-// now a classic exercise: chifoumi game
+// now a classic exercise: chifoumi game (without user input)
 if (player1 === computer) {
     // tie game!
 } else if (player1 === "rock") {
@@ -57,12 +57,13 @@ if (player1 === computer) {
     } else {
         // player 1 wins!
     } 
-} else if (player1 === "scissors") {
+} else {
     if (computer === "rock") {
         // computer wins!
     } else {
         // player 1 wins!
     } 
-} else {
-    console.log("Invalid input. Please enter rock, paper, or scissors.");
 }
+
+console.log("Invalid input. Please enter rock, paper, or scissors.");
+

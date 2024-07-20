@@ -123,5 +123,17 @@ see file `chapter6.js`
 
 see file `chapter7.js` 
 
+---
 
-@46/475
+# Chapter 8 - Switch statements
+
+see file `chapter8.js` 
+
+---
+
+# Chapter 9 - Ternary operator
+
+see file `chapter9.js`  
+
+
+@50/475

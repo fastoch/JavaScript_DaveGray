@@ -135,5 +135,13 @@ see file `chapter8.js`
 
 see file `chapter9.js`  
 
+---
 
-@52/475
+# Chapter 10 - User input
+
+see file `chapter10.js` 
+
+
+
+
+@60/475 (12%)

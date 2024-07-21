@@ -11,3 +11,12 @@ console.log(response);
 let temperature = 25;
 let weather = temperature > 20? "warm" : temperature < 10? "cold" : "moderate";
 console.log(`The weather is ${weather}.`);
+
+// another example:
+let score = 85;
+let myGrade = score >= 90? "A" 
+: score >= 80? "B"
+: score >= 70? "C"
+: score >= 60? "D"
+: "F";
+console.log(`Your grade is ${myGrade}.`);

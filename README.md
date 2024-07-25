@@ -141,7 +141,11 @@ see file `chapter9.js`
 
 see file `chapter10.js` 
 
+# Chapter 11 - Your first interactive game
+
+see file `chapter11.js` 
 
 
 
-@62/475 (13%)
+
+@65/475 (13%)

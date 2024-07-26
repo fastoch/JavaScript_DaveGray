@@ -145,7 +145,10 @@ see file `chapter10.js`
 
 see file `chapter11.js` 
 
+# Chapter 12 - intro to Loops
+
+see file `chapter12.js` 
 
 
 
-@70/475 (14%)
+@80/475 (16%)

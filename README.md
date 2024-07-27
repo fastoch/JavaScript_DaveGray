@@ -147,8 +147,9 @@ see file `chapter11.js`
 
 # Chapter 12 - intro to Loops
 
-see file `chapter12.js` 
+see file `chapter12.js`  
+
+- You can use the break keyword to get out of any loop.
 
 
-
-@85/475 (17%)
+@96/475 (20%)

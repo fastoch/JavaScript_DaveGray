@@ -150,6 +150,13 @@ see file `chapter11.js`
 see file `chapter12.js`  
 
 - You can use the break keyword to get out of any loop.
+- You can use the continue keyword to skip the current iteration.
+
+# Chapter 13 - Functions
+
+see file `chapter13.js` 
 
 
-@96/475 (20%)
+
+
+@100/475 (21%)

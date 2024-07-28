@@ -40,7 +40,7 @@ while (true) {
 // using the continue statement to skip specific loop iterations
 let stupidName = "Ryan Groshling";
 for (i = 0; i < stupidName.length; i++){
-  // skip the letters 'r' and 'h' 
+  // skip the letters 'r' and 'h' to print out 'Ryan Gosling' vertically 
   if (i === 6 || i === 9) {
     continue;
   }

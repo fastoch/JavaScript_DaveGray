@@ -156,7 +156,11 @@ see file `chapter12.js`
 
 see file `chapter13.js` 
 
+# Chapter 14 - Scope
+
+see file `chapter14.js` 
 
 
 
-@100/475 (21%)
+
+@110/475 (23%)

@@ -17,7 +17,7 @@ function getUserNameFromEmail(email) {
   return email.slice(0, email.indexOf('@'));
 }
 
-// then, we call the function 
+// then, we call (or invoke) the function 
 console.log(getUserNameFromEmail('john.doe@example.com'));
 
 

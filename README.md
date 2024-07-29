@@ -195,14 +195,16 @@ see file `chapter14.js`
 
 ## Global scope
 
-- if you define a variable outside of any function, it is a **global** variable.
+- if you define a variable **outside of any function**, it is a **global variable**.
 - a global variable **can be accessed from anywhere** in your JavaScript code.
 
 ## Local scope
 
-- for local scope, we have **function scope** and **block scope**
-- when a variable is defined inside a block of code, it's not accessible outside of that block
-- the block of code can be a function declaration, or any set of curly braces
+Local scope refers to the **visibility** and **accessibility** of variables within a specific block of code,  
+typically **within a function or a code block denoted by curly braces** {}. 
+
+- variables declared with **var** are **function-scoped**
+- variables declared with **let** and **const** are **block-scoped**
 
 ---
 
@@ -211,4 +213,4 @@ see file `chapter14.js`
 
 
 
-@113/475 (23%)
+@123/475 (25%)

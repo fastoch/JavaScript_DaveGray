@@ -206,11 +206,23 @@ typically **within a function or a code block denoted by curly braces** {}.
 - variables declared with **var** are **function-scoped**
 - variables declared with **let** and **const** are **block-scoped**
 
+## Some tips
+
+- **avoid using var**, stick with const and let
+- use **const** unless you need to reassign the value
+- use **less** when you know you will reassign the value
+- **global variables**, overall, are **not desirable**
+
 ---
 
-# Chapter 15 - 
+# Chapter 15 - Arrays
+
+see file `chapter15.js`
+
+- Arrays are a data structure that can store different types of data
+- you can nest arrays within arrays
+- 
 
 
 
-
-@123/475 (25%)
+@130/475 (27%)

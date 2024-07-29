@@ -19,3 +19,4 @@ z = 50; // this will throw an error
 // if you define a variable outside of any function, it is a global variable.
 // a global variable can be accessed from anywhere in your JavaScript code.
 
+// more in the README.md file

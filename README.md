@@ -219,14 +219,17 @@ typically **within a function or a code block denoted by curly braces** {}.
 
 see file `chapter15.js`
 
-- Arrays are a data structure that can store different types of data
-- you can nest arrays within arrays
+- Arrays are a very useful data structure that can store different types of data
+- you can actually nest arrays within arrays
 - `push` **appends** elements to the end of an array
 - `unshift` **inserts** elements at the start of an array
 - `push()` and `unshift()` return the new **length** of the array
 - `pop()` **removes** the last element from an array and returns it
 - `shift()` **removes** the first element from an array and returns it
+- the `splice()` method is very versatile 
+  - it allows us to remove an element from the middle of an array
+  - it also allows us to replace one or many elements 
+  - we can also insert new elements anywhere in the array
 
 
-
-@135/475 (28%)
+@140/475 (29%)

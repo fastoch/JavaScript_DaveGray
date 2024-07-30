@@ -221,8 +221,12 @@ see file `chapter15.js`
 
 - Arrays are a data structure that can store different types of data
 - you can nest arrays within arrays
-- 
+- `push` **appends** elements to the end of an array
+- `unshift` **inserts** elements at the start of an array
+- `push()` and `unshift()` return the new **length** of the array
+- `pop()` **removes** the last element from an array and returns it
+- `shift()` **removes** the first element from an array and returns it
 
 
 
-@130/475 (27%)
+@135/475 (28%)

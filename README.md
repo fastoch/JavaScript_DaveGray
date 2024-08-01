@@ -236,6 +236,13 @@ see file `chapter15.js`
 - `split()` splits a string into substrings using the specified separator and return them as an array
 - `concat()` combines 2 or more arrays, and returns a new array without modifying any existing arrays
 
+---
+
+# Chapter 16 - Refactor the chifoumi game with arrays
+
+see file `chapter16.js`
 
 
-@146/475 (30%)
+
+
+@155/475 (32%)

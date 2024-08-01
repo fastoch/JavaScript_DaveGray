@@ -78,3 +78,6 @@ console.log(array5); // [ "a", "b", "c", "d", "e", "f" ]
 const array6 = [...array1, ...array3];
 console.log(array6); // [ "a", "b", "c", "d", "e", "f" ]
 
+// Multi-dimensional arrays
+const multiArray = [[1,2,3], [4,5,6], [7,8,9]];
+console.log(multiArray[1][2]); // 6

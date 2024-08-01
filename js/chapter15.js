@@ -55,5 +55,26 @@ console.log(array2); // [ "c", "d", "e", "f", "g" ]
 console.log(array3); // [ "d", "e", "f" ]
 
 // reverse an array
-array0.reverse();
+array0.reverse(); // does not create a new array
 console.log(array0); // [ "g", "f", "e", "d", "c", "b", "a" ]
+
+// ARRAY to STRING
+// adds elements of an array into a string, separated by the specified separator
+const newString = array0.join(""); // separator = empty string
+console.log(newString); // gfedcba
+const newString2 = array0.join(); 
+console.log(newString2); // g,f,e,d,c,b,a
+
+// STRING to ARRAY
+// split a string into substrings using the specified separator and return them as an array
+const array4 = newString2.split(","); 
+console.log(array4); // [ "g", "f", "e", "d", "c", "b", "a" ]
+
+// concatenate arrays using concat()
+const array5 = array1.concat(array3);
+console.log(array5); // [ "a", "b", "c", "d", "e", "f" ]
+
+// concatenate arrays using the spread [...] operator
+const array6 = [...array1, ...array3];
+console.log(array6); // [ "a", "b", "c", "d", "e", "f" ]
+

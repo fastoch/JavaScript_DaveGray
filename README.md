@@ -230,6 +230,12 @@ see file `chapter15.js`
   - it allows us to remove an element from the middle of an array
   - it also allows us to replace one or many elements 
   - we can also insert new elements anywhere in the array
+- `splice()` return a copy of a section of an array
+- `reverse()` reverses the elements in an array in place (does not create a new array)
+- `join()` adds all the elements of an array into a string, separated by the specified separator 
+- `split()` splits a string into substrings using the specified separator and return them as an array
+- `concat()` combines 2 or more arrays, and returns a new array without modifying any existing arrays
 
 
-@140/475 (29%)
+
+@146/475 (30%)

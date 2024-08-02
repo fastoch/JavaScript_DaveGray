@@ -1,4 +1,4 @@
-// We're going to refactor our chifoumi game from chapter 11
+// Another refactored version of our chifoumi game with functions
 let playGame = confirm('Shall we play rock, paper, scissors?');
 
 // Start the game if player decides to play it. 

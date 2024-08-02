@@ -243,6 +243,7 @@ see file `chapter15.js`
 see file `chapter16.js`  
 Refactored version of our chifoumi game from chapter 11 with a while loop and an array.
 
+# Chapter 17 - 
 
 
-@156/475 (32%)
+@160/475 (33%)

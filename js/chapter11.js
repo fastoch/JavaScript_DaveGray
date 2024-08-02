@@ -3,7 +3,7 @@ let playGame = confirm('Shall we play rock, paper, scissors?');
 if (playGame) {
   let playerChoice = prompt('Enter your choice (rock, paper, or scissors):');
   if (playerChoice) {
-    player = playerChoice.trim().toLowerCase();
+    let player = playerChoice.trim().toLowerCase();
     if (player === "rock" || player === "paper" || player === "scissors") {
       let computerChoice = Math.floor(Math.random() * 3 + 1); // random number from 1 to 3
       let computer = computerChoice === 1? "rock" : computerChoice === 2? "paper" : "scissors";
@@ -14,9 +14,12 @@ if (playGame) {
       } else {
         alert(`You win!\nYour choice: ${player}\nComputer choice: ${computer}`);
       }
+
+      let playAgain = confirm('Do you want to play again?');
+      playAgain ? location.reload() : alert('Goodbye then!');
+
     } else {
       alert('Invalid choice. Please enter rock, paper, or scissors.');
-
     }
   } else {
     alert('I guess you changed your mind. Maybe next time...');
@@ -24,5 +27,3 @@ if (playGame) {
 } else {
   alert('Ok, maybe next time!');
 }
-let playAgain = confirm('Do you want to play again?');
-playAgain ? location.reload() : alert('Goodbye then!');

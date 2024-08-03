@@ -258,8 +258,8 @@ In order to tye our game into the **DOM** of a webpage, we need to use functions
 >And since initGame() calls playGame() which then calls all other functions, we need to invoke initGame() 
 >at the end of the program, after all functions have been declared.
 
-# Chapter 17 - 
+# Chapter 17 - Objects
 
 
 
-@171/475 (36%)
+@172/475 (36%)

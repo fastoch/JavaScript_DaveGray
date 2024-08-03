@@ -247,12 +247,19 @@ see files `chapter16.js` and `chapter16-2.js`
 The version with functions is significantly longer but it's organised very neatly into functions,  
 and functions will let us make the transition to making this game part of the **DOM** in the next version.  
 
+In order to tye our game into the **DOM** of a webpage, we need to use functions.
+
 >[!note] 
 >DOM = document object model
 
+>[!important]
+>The TDZ (temporal dead zone) is a behavior in JavaScript where variables declared with let and const
+>cannot be accessed before their declaration in the code. 
+>And since initGame() calls playGame() which then calls all other functions, we need to invoke initGame() 
+>at the end of the program, after all functions have been declared.
 
 # Chapter 17 - 
 
 
 
-@165/475 (34%)
+@171/475 (36%)

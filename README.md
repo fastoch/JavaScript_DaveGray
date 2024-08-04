@@ -255,11 +255,12 @@ In order to tye our game into the **DOM** of a webpage, we need to use functions
 >[!important]
 >The TDZ (temporal dead zone) is a behavior in JavaScript where variables declared with let and const
 >cannot be accessed before their declaration in the code. 
->And since initGame() calls playGame() which then calls all other functions, we need to invoke initGame() 
+>And since `initGame()` calls `playGame()` which then calls all other functions, we need to invoke `initGame()`
 >at the end of the program, after all functions have been declared.
 
 # Chapter 17 - Objects
 
 
 
-@175/475 (36%)
+
+@180/475 (37%)

@@ -263,4 +263,4 @@ In order to tye our game into the **DOM** of a webpage, we need to use functions
 
 
 
-@180/475 (37%)
+@185/475 (39%)

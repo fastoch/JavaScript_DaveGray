@@ -32,10 +32,26 @@ const vehicle = {
   engine: function() {
     return "Vrrooom!";
   }
-}
+};
 
 // using the constructor to create another object
 const truck = Object.create(vehicle);
 truck.doors = 2;
 console.log(truck); // {doors: 2}
+console.log(truck.wheels); // 4 (inherited from vehicle)
+console.log(truck.engine()); // Vrrooom!
 
+const car = Object.create(vehicle);
+car.doors = 4;
+car.engine = function() {
+  return "Whoooosh!";
+};
+console.log(car.engine());
+// we overwrote the inherited engine() method
+
+const tesla = Object.create(car);
+tesla.engine = function () {
+  return "Shhhhhh...";
+};
+console.log(tesla.wheels);
+console.log(tesla.engine());

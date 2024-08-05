@@ -241,6 +241,7 @@ see file `chapter15.js`
 # Chapter 16 - Refactoring the chifoumi game 
 
 see files `chapter16.js` and `chapter16-2.js`
+
 - Refactored version of our chifoumi game from chapter 11 with a **while loop** and an **array**.
 - another refactored version of our chifoumi game with **functions**.
 
@@ -260,7 +261,7 @@ In order to tye our game into the **DOM** of a webpage, we need to use functions
 
 # Chapter 17 - Objects
 
+see file `chapter17.js`
 
 
-
-@185/475 (39%)
+@190/475 (40%)

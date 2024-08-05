@@ -26,6 +26,19 @@ console.log(person.nestedObject.key1);
 console.log(person.action());
 console.log(person.action2());
 
+// to log all of the keys in the object
+console.log(Object.keys(person)); // returns an array
+
+// to log all of the values in the object
+for (let key in person) {
+  console.log(person[key]);
+}
+
+// to delete a property
+console.log(person.hasOwnProperty("nestedObject")); // true
+delete person.nestedObject;
+console.log(person.hasOwnProperty("nestedObject")); // false
+
 // A constructor object
 const vehicle = {
   wheels: 4,
@@ -55,3 +68,5 @@ tesla.engine = function () {
 };
 console.log(tesla.wheels);
 console.log(tesla.engine());
+
+// Destructuring objects

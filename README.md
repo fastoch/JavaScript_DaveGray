@@ -285,11 +285,15 @@ greetUser(user); // Hello, Alice! You are 32 years old.
 see file `chapter18.js`
 
 - The JavaScript Class syntax didn't come about until ES6 in 2015. 
-- 
+  
+To prevent our object properties from being accessed directly through the dot notation,  
+we need to use **getters** and **setters**.  
+
+
 
 >[!note]
 >ECMAScript 6 was the second major revision to JavaScript.
 
 
 
-@198/475 (41%)
+@200/475 (42%)

@@ -264,4 +264,4 @@ In order to tye our game into the **DOM** of a webpage, we need to use functions
 see file `chapter17.js`
 
 
-@190/475 (40%)
+@192/475 (40%)

@@ -69,4 +69,16 @@ tesla.engine = function () {
 console.log(tesla.wheels);
 console.log(tesla.engine());
 
+
 // Destructuring objects
+// The above tesla object has a property called 'doors'
+// we can put the value associated with that property into a variable
+// the syntax is: const { key: variable } = object;
+const { doors: myVariable } = tesla; 
+console.log(myVariable); // 4
+// we pulled out the value associated with a specific key and put it into a variable
+
+// we can do that for more than one value at a time
+const { doors: variable1, wheels: variable2 } = truck;
+console.log(`My truck has ${variable1} doors and ${variable2} wheels.`); 
+// we could also name these variables as their corresponding keys (doors and wheels)

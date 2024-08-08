@@ -263,5 +263,33 @@ In order to tye our game into the **DOM** of a webpage, we need to use functions
 
 see file `chapter17.js`
 
+- **Object destructuring** is a convenient way to extract values from objects 
+- we can then pass these values as arguments to a function
 
-@192/475 (40%)
+```js
+const user = {
+  name: 'Alice',
+  age: 32,
+  email: 'alice@gmail.com'
+};
+
+function greetUser({ name, age }) {
+  console.log(`Hello, ${name}! You are ${age} years old.`);
+}
+
+greetUser(user); // Hello, Alice! You are 32 years old.
+```
+
+# Chapter 18 - Classes
+
+see file `chapter18.js`
+
+- The JavaScript Class syntax didn't come about until ES6 in 2015. 
+- 
+
+>[!note]
+>ECMAScript 6 was the second major revision to JavaScript.
+
+
+
+@196/475 (41%)

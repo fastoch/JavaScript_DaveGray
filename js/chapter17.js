@@ -72,13 +72,30 @@ console.log(tesla.engine());
 
 // Destructuring objects
 // The above tesla object has a property called 'doors'
-// we can put the value associated with that property into a variable
-// the syntax is: const { key: variable } = object;
+// we can assign the value associated with that property to a variable
+// the syntax is: const { property: variable } = object;
+
 const { doors: myVariable } = tesla; 
 console.log(myVariable); // 4
-// we pulled out the value associated with a specific key and put it into a variable
+// we pulled out the value associated with a specific key (property) and put it into a variable
 
 // we can do that for more than one value at a time
 const { doors: variable1, wheels: variable2 } = truck;
 console.log(`My truck has ${variable1} doors and ${variable2} wheels.`); 
-// we could also name these variables as their corresponding keys (doors and wheels)
+
+// we could also name these variables after their corresponding keys (doors and wheels)
+const { doors, wheels } = truck;
+console.log(`My truck has ${doors} doors and ${wheels} wheels.`);
+
+// we can use object destructuring to pass values to a function
+const user = {
+  name: 'Alice',
+  age: 32,
+  email: 'alice@gmail.com'
+};
+
+function greetUser({ name, age }) {
+  console.log(`Hello, ${name}! You are ${age} years old.`);
+}
+
+greetUser(user); // Hello, Alice! You are 32 years old.

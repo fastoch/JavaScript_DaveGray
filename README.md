@@ -289,11 +289,9 @@ see file `chapter18.js`
 To prevent our object properties from being accessed directly through the dot notation,  
 we need to use **getters** and **setters**.  
 
-
-
 >[!note]
 >ECMAScript 6 was the second major revision to JavaScript.
 
 
 
-@200/475 (42%)
+@205/475 (43%)

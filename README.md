@@ -292,12 +292,14 @@ we need to use **getters** and **setters**.
 >[!note]
 >ECMAScript 6 was the second major revision to JavaScript.
 
-- To declare a child class that inherits properties from its parent class, we use the keyword **extends**
-- the syntax is:  
+## Child classes
+
+- To declare a **child** class that inherits properties from its **parent** class, we use the keyword **extends**
+- The syntax is:  
 ```js
 class SportsCar extends Car {
   constructor(carType) {
-    super(carType);
+    super(carType); // calling the constructor from the parent class
     this.newPorperty = someValue;
   }
 }
@@ -309,7 +311,32 @@ class SportsCar extends Car {
 
 - **super** calls the constructor of the parent class
 
+## Naming conventions
+
+We previously discussed about not accessing the properties nor setting their values directly, which is why  
+we defined getters & setters methods.  
+But since JavaScript does allow this, we need to indicate to other developers we're working with that we  
+intend these properties to be private. That means they should not be modified or accessed outside of the class,  
+they should only be modified within the class using getters & setters methods.  
+
+By convention, we use the underscore notation to indicate that a property is private.  
+For example:
+```js
+this._size = pizzaSize;
+this._crust = "thin";
+```
+
+There is another way to create objects in JavaScript that solves this problem.  
+Because, even though the intentions are good here, we can still access or modify these properties.
+
+## Factory functions 
+
+See file `chapter18-2.js`
+
+A factory function is another way to create an object in JavaScript.  
+We use it as a factory for object creation.  
 
 
 
-@210/475 (44%)
+
+@213/475 (44%)

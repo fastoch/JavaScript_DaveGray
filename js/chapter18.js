@@ -3,19 +3,19 @@
 // A class is a blueprint for creating objects
 class Pizza {
   constructor(pizzaType, pizzaSize) {
-    this.type = pizzaType;
-    this.size = pizzaSize;
-    this.crust = "original";
-    this.toppings = [];
+    this._type = pizzaType;
+    this._size = pizzaSize;
+    this._crust = "original";
+    this._toppings = [];
   }
 
-  getCrust() { return this.crust; }
-  setCrust(newCrust) { this.crust = newCrust; }
-  getToppings() { return this.toppings; }
-  setToppings(newTopping) { this.toppings.push(newTopping); }
+  getCrust() { return this._crust; }
+  setCrust(newCrust) { this._crust = newCrust; }
+  getToppings() { return this._toppings; }
+  setToppings(newTopping) { this._toppings.push(newTopping); }
   
   bake() {
-    console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza...`);
+    console.log(`Baking a ${this._size} ${this._type} ${this._crust} crust pizza...`);
   }
 }
 
@@ -23,9 +23,9 @@ class Pizza {
 const myPizza = new Pizza("pepperoni", "large");
 myPizza.bake(); // and calling the bake() method
 
-console.log(myPizza.type); // pepperoni
-myPizza.type = "supreme"; 
-console.log(myPizza.type); // supreme
+console.log(myPizza._type); // pepperoni
+myPizza._type = "supreme"; 
+console.log(myPizza._type); // supreme
 myPizza.bake(); 
 
 // to prevent our object properties from being accessed directly through the dot notation, 

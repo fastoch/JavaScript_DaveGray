@@ -292,6 +292,24 @@ we need to use **getters** and **setters**.
 >[!note]
 >ECMAScript 6 was the second major revision to JavaScript.
 
+- To declare a child class that inherits properties from its parent class, we use the keyword **extends**
+- the syntax is:  
+```js
+class SportsCar extends Car {
+  constructor(carType) {
+    super(carType);
+    this.newPorperty = someValue;
+  }
+}
+```
+- a **parent** class is also called a **superclass**
+
+>[!important]
+>the **super** keyword has to be used in the constructor BEFORE we can ever use the keyword **this**
+
+- **super** calls the constructor of the parent class
 
 
-@205/475 (43%)
+
+
+@210/475 (44%)

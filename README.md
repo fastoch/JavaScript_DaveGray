@@ -346,7 +346,7 @@ We use it as a factory for object creation.
   - Reducing confusion related to the **this** keyword
   - Providing a **more straightforward syntax for object creation**
 
-For more about Factory Funtions:
+For more about Factory Functions:
 - https://www.perplexity.ai/search/what-s-the-point-of-using-a-fa-sFi2XUf6RF6P6N2.lvmTMQ  
 - https://dev.to/snevy1/classes-vs-factory-functions-in-javascript-4fjn  
 

@@ -259,6 +259,8 @@ In order to tye our game into the **DOM** of a webpage, we need to use functions
 >And since `initGame()` calls `playGame()` which then calls all other functions, we need to invoke `initGame()`
 >at the end of the program, after all functions have been declared.
 
+---
+
 # Chapter 17 - Objects
 
 see file `chapter17.js`
@@ -279,6 +281,8 @@ function greetUser({ name, age }) {
 
 greetUser(user); // Hello, Alice! You are 32 years old.
 ```
+
+---
 
 # Chapter 18 - Classes
 
@@ -333,10 +337,24 @@ Because, even though the intentions are good here, we can still access or modify
 
 See file `chapter18-2.js`
 
-A factory function is another way to create an object in JavaScript.  
+A factory function is **another way to create an object** in JavaScript.  
 We use it as a factory for object creation.  
 
+- Factory functions excel at **creating private variables and methods** through closures
+- Factory functions can simplify object creation by:
+  - Eliminating the need for the **new** keyword
+  - Reducing confusion related to the **this** keyword
+  - Providing a **more straightforward syntax for object creation**
+
+For more about Factory Funtions:
+- https://www.perplexity.ai/search/what-s-the-point-of-using-a-fa-sFi2XUf6RF6P6N2.lvmTMQ  
+- https://dev.to/snevy1/classes-vs-factory-functions-in-javascript-4fjn  
 
 
 
-@213/475 (44%)
+
+---
+
+EOF
+
+@217/475 (45%)

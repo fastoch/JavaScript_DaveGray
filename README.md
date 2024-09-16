@@ -378,4 +378,4 @@ Since ES2022, Classes now support public and private fields (properties).
 
 EOF
 
-@217/475 (45%)
+@223/475 (47%)

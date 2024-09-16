@@ -1,7 +1,9 @@
 class Pizza {
+  crust = "original";   // public field
+  #sauce = "napolitan";    // private field
+
   constructor(pizzaSize) {
     this.size = pizzaSize;
-    this.crust = "original";
   }
   getCrust() {
     return this.crust;

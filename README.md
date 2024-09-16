@@ -346,7 +346,9 @@ We don't want all our objects' properties to be accessible from anywhere.
 And variables created inside a factory function are not accessible outside of this function.
 
 - Factory functions excel at **creating private variables and methods** through closures
-A closure is created when a function is defined within another function, allowing the inner function to access variables from the outer function's scope.
+
+>[!note]
+>A closure is created when a function is defined within another function, allowing the inner function to access variables from the outer function's scope.
 
 - Factory functions can simplify object creation by:
   - Eliminating the need for the **new** keyword

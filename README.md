@@ -345,10 +345,11 @@ We don't want all our objects' properties to be accessible from anywhere.
 
 And variables created inside a factory function are not accessible outside of this function.
 
-- Factory functions excel at **creating private variables and methods** through closures
+- Factory functions excel at creating **private variables & methods** through **closures**
 
 >[!note]
->A closure is created when a function is defined within another function, allowing the inner function to access variables from the outer function's scope.
+>A **closure** is created when a function is defined within another function, allowing the inner function to access variables from the outer function's scope.
+>The inner function maintains access to the outer function's scope even after the outer function has finished executing.
 
 - Factory functions can simplify object creation by:
   - Eliminating the need for the **new** keyword
@@ -359,8 +360,19 @@ For more about Factory Functions:
 - https://www.perplexity.ai/search/what-s-the-point-of-using-a-fa-sFi2XUf6RF6P6N2.lvmTMQ  
 - https://dev.to/snevy1/classes-vs-factory-functions-in-javascript-4fjn  
 
+**Factory functions** are a better way of creating objects than **Classes** because they ensure data encapsulation (privacy).  
+
+## Public and private Class fields 
+
+see file `chapter18-3.js`
+
+Since ES2022, Classes now support public and private fields (properties).  
 
 
+
+---
+
+# Chapter 19 - 
 
 ---
 

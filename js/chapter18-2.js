@@ -1,4 +1,4 @@
-// Factory function
+// Factory function (used as a factory for object creation)
 function pizzaFactory(pizzaSize) {
   const crust = "original";
   const size = pizzaSize;

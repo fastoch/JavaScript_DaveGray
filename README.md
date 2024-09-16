@@ -340,7 +340,14 @@ See file `chapter18-2.js`
 A factory function is **another way to create an object** in JavaScript.  
 We use it as a factory for object creation.  
 
+Factory functions are a solution to the problem of not being able to create objects that have **private** properties.  
+We don't want all our objects' properties to be accessible from anywhere. 
+
+And variables created inside a factory function are not accessible outside of this function.
+
 - Factory functions excel at **creating private variables and methods** through closures
+A closure is created when a function is defined within another function, allowing the inner function to access variables from the outer function's scope.
+
 - Factory functions can simplify object creation by:
   - Eliminating the need for the **new** keyword
   - Reducing confusion related to the **this** keyword

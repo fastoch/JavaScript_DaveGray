@@ -385,9 +385,19 @@ see `chapter19.js`
 
 # Chapter 20 - Handling Errors
 
+see `chapter20.js`
 
+---
+
+# Chapter 21 - DOM (Document Object Model)
+
+see `chapter21.js`
+
+---
+
+# Chapter 22 - 
 
 
 ---
 
-@238/475min (50%)
+@247/475min (52%)

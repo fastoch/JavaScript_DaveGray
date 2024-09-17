@@ -1,3 +1,5 @@
+// Public Class fields & Private Class fields
+
 class Pizza {
   crust = "original";     // public field
   #sauce = "napolitan";   // private field

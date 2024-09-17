@@ -381,6 +381,4 @@ A great tool to test your website for compatibility: https://caniuse.com/
 
 ---
 
-EOF
-
-@226/475 (47%)
+@230/475 (48%)

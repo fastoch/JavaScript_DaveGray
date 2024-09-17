@@ -367,15 +367,20 @@ For more about Factory Functions:
 see file `chapter18-3.js`
 
 Since ES2022, Classes now support public and private fields (properties).  
+These fields must be declared **above the constructor**.  
+Public fields can be accessed from outside the class, but private ones can only be accessed within the class.  
 
-
+A great tool to test your website for compatibility: https://caniuse.com/
 
 ---
 
-# Chapter 19 - 
+# Chapter 19 - JSON
+
+- JSON stands for JavaScript Object Notation.  
+- 
 
 ---
 
 EOF
 
-@223/475 (47%)
+@226/475 (47%)

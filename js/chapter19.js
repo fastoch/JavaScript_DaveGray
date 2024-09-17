@@ -19,7 +19,7 @@ console.log(myObj.name);
 myObj.hello();
 console.log(typeof myObj); 
 
-const sendJSON = JSON.stringify(myObj);
+const sendJSON = JSON.stringify(myObj); // convert our object into a string and assign it to sendJSON
 console.log(sendJSON);  // {"name":"Dave","hobbies":["coding","gaming","soccer"]}
 console.log(typeof sendJSON); // string
 
@@ -27,3 +27,6 @@ console.log(typeof sendJSON); // string
 // stringify() converts a JS value to a JSON string
 
 // what we notice is that JSON does not send functions
+
+const receiveJSON = JSON.parse(sendJSON); // convert a JSON string into an object
+console.log(receiveJSON);

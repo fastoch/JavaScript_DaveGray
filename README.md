@@ -376,9 +376,18 @@ A great tool to test your website for compatibility: https://caniuse.com/
 
 # Chapter 19 - JSON
 
+see `chapter19.js` 
+
 - JSON stands for JavaScript Object Notation.  
 - 
 
 ---
 
-@230/475 (48%)
+# Chapter 20 - Handling Errors
+
+
+
+
+---
+
+@238/475min (50%)

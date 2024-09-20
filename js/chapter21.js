@@ -14,3 +14,8 @@ const view2 = document.querySelector("#view2"); // using # to indicate that it's
 view1.style.display = "none";
 view2.style.display = "flex";
 
+// select multiple views
+const views = document.getElementsByClassName("view"); // returns an HTMLCollection (not exactly an array)
+
+// another way to select the views having a specific class
+const sameViews = document.querySelectorAll(".view"); // returns a NodeList

@@ -397,8 +397,8 @@ see `chapter21.js`
 
 # Chapter 22 - 
 
-
+see `chapter22.js`
 
 ---
 
-@250/475min (52%)
+@255/475min (54%)

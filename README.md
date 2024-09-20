@@ -395,10 +395,10 @@ see `chapter21.js`
 
 ---
 
-# Chapter 22 - 
+# Chapter 22 - Event Listeners
 
 see `chapter22.js`
 
 ---
 
-@255/475min (54%)
+@282/475min (59%)

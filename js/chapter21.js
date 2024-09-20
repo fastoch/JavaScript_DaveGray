@@ -46,12 +46,28 @@ navbar.innerHTML = `<h1>Hello!</h1> <p>This should align right.</p>`;
 // the paragraph should align right because I'm using the flexbox layout + justify-content: space-between
 
 
-// Now let's talk about navigating the DOM tree
-/*
-HTML
-    >HEAD 
-    >BODY
-        >Section
-            >Div
-                >...
-*/
+// Now let's talk about adding or removing elements to the DOM (the webpage)
+
+// while view2 has a last child (node), remove it
+while (view2.lastChild) {
+    view2.lastChild.remove();
+}
+// this will clear out the entire webpage, except for nodes that are not part of the view2 section
+
+// adding elements via a function
+const createDivs = (parent, iterator) => {
+    const newDiv = document.createElement("div");
+    newDiv.textContent = iterator;
+    newDiv.style.backgroundColor = "#000";
+    newDiv.style.width = "100px";
+    newDiv.style.height = "100px";
+    newDiv.style.margin = "10px";
+    newDiv.style.display = "flex";
+    newDiv.style.justifyContent = "center";
+    newDiv.style.alignItems = "center"; // vertical alignment
+    parent.append(newDiv);
+}
+// create 12 divs and append them to the view2 element
+for (i = 1; i <= 12; i++) {
+    createDivs(view2, i);
+}

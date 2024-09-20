@@ -44,3 +44,4 @@ const navbar = document.querySelector("nav");
 navbar.innerHTML = `<h1>Hello!</h1> <p>This should align right.</p>`;
 // Note that the innerHTML value will overwrite the textContent we previously added
 // the paragraph should align right because I'm using the flexbox layout + justify-content: space-between
+

@@ -19,3 +19,12 @@ const views = document.getElementsByClassName("view"); // returns an HTMLCollect
 
 // another way to select the views having a specific class
 const sameViews = document.querySelectorAll(".view"); // returns a NodeList
+
+// select all the divs within a specific view
+const divs = view1.querySelectorAll("div");
+// we could achieve the same with:
+const sameDivs = view1.getElementsByTagName("div");
+
+// select even divs
+const evenDivs = view1.querySelectorAll("div:nth-of-type(2n)");
+

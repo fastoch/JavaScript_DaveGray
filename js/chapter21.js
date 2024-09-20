@@ -45,3 +45,13 @@ navbar.innerHTML = `<h1>Hello!</h1> <p>This should align right.</p>`;
 // Note that the innerHTML value will overwrite the textContent we previously added
 // the paragraph should align right because I'm using the flexbox layout + justify-content: space-between
 
+
+// Now let's talk about navigating the DOM tree
+/*
+HTML
+    >HEAD 
+    >BODY
+        >Section
+            >Div
+                >...
+*/

@@ -26,3 +26,29 @@ h2.addEventListener("click", (event) => {
   event.target.textContent = "Clicked"; // change the content of the h2 element
 });
 
+// if the HTML document (the webpage) is loaded, log a message to the console
+// and start our web application
+document.addEventListener("readystatechange", (event) => {
+  if (event.target.readyState === "complete") {
+    console.log("readyState: complete");
+    initApp(); 
+  }
+});
+
+// defining the initApp function
+const initApp = () => {
+  console.log("Initializing the app...");
+  const view = document.querySelector("#view");
+  const div = view.querySelector("div");
+  const h2 = div.querySelector("h2");
+
+  view.addEventListener("click", (event) => {
+    view.style.backgroundColor = "purple";
+  });
+  div.addEventListener("click", (event) => {
+    div.style.backgroundColor = "blue";
+  });
+  h2.addEventListener("click", (event) => {
+    event.target.textContent = "clicked";
+  });
+};

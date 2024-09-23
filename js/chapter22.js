@@ -45,10 +45,20 @@ const initApp = () => {
   view.addEventListener("click", (event) => {
     view.style.backgroundColor = "purple";
   });
+
   div.addEventListener("click", (event) => {
     div.style.backgroundColor = "blue";
   });
+
   h2.addEventListener("click", (event) => {
     event.target.textContent = "clicked";
   });
 };
+
+// useCapture & event bubbling
+/* 
+When useCapture is set to false, which is the default, we enable event bubbling.
+Event bubbling is a DOM event propagation method where an event triggered on the innermost element triggers events on ancestor elements.
+This propagation keeps on until it reaches the outermost DOM element.
+Meaning that when we click the h2 element, every other event listener is triggered (in the div that contains the h2, and then in the view).
+*/

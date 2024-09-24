@@ -91,3 +91,10 @@ h2.addEventListener("click", (e) => {
   e.stopPropagation();
   e.target.textContent = "clicked";
 });  // notice that useCapture is not passed, meaning it's set to false, so the propagation happens outwards
+
+
+/*
+Notice how we used the event target for changing the h2 element, but we didn't do the same for the div and the view.
+If we use the event.target everywhere, when we click the h2, only the h2 would be affected, not other elements.
+The h2 text would become "clicked", then the h2 background color would turn to blue, and finally the h2 background would turn to purple.
+*/

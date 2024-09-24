@@ -58,7 +58,36 @@ const initApp = () => {
 // useCapture & event bubbling
 /* 
 When useCapture is set to false, which is the default, we enable event bubbling.
-Event bubbling is a DOM event propagation method where an event triggered on the innermost element triggers events on ancestor elements.
-This propagation keeps on until it reaches the outermost DOM element.
-Meaning that when we click the h2 element, every other event listener is triggered (in the div that contains the h2, and then in the view).
+Event bubbling is a DOM event propagation method where an event triggered on the INNERMOST element 
+automatically triggers events on all ancestor elements. This propagation keeps on until it reaches the outermost element.
+
+In the above example, when we click the h2 element, every other event listener is triggered, in the div that contains the h2, 
+and then in the view that contains the div.
+
+When useCapture is set to true, the event listener is triggered during the capturing phase of event propagation, rather than the default bubbling phase. 
+This means the event is captured and handled by the OUTERMOST element first, then propagated to the inner elements until it reaches its target.
 */
+
+view.addEventListener("click", (event) => {
+  view.style.backgroundColor = "purple";
+}, true);
+
+div.addEventListener("click", (event) => {
+  div.style.backgroundColor = "blue";
+}, true);
+
+h2.addEventListener("click", (e) => {
+  e.target.textContent = "clicked";
+}, true);
+
+// we can use the stopPropagation() function in the outermost element to prevent triggering inner events
+view.addEventListener("click", (event) => {
+  event.stopPropagation();
+  view.style.backgroundColor = "purple";
+}, true);  // with useCapture set to true, the propagation happens inwards (towards the innermost element)
+
+// or we can use the stopPropagation() function in the innermost element to prevent triggering outer events
+h2.addEventListener("click", (e) => {
+  e.stopPropagation();
+  e.target.textContent = "clicked";
+});  // notice that useCapture is not passed, meaning it's set to false, so the propagation happens outwards

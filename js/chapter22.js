@@ -94,7 +94,6 @@ h2.addEventListener("click", (e) => {
 
 
 /*
-Notice how we used the event target for changing the h2 element, but we didn't do the same for the div and the view.
-If we use the event.target everywhere, when we click the h2, only the h2 would be affected, not other elements.
-The h2 text would become "clicked", then the h2 background color would turn to blue, and finally the h2 background would turn to purple.
+Notice how we used event.target for changing the h2 element, but we didn't do the same for the div and the view.
+When using event.target, only the actual event target gets affected, no matter which element you apply the addEventListener() to.
 */

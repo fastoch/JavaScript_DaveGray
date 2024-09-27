@@ -94,6 +94,28 @@ h2.addEventListener("click", (e) => {
 
 
 /*
-Notice how we used event.target for changing the h2 element, but we didn't do the same for the div and the view.
-When using event.target, only the actual event target gets affected, no matter which element you apply the addEventListener() to.
+Notice how we used event.target for the h2 element, but we didn't do the same for the div and the view.
+When using event.target, only the actual event target gets affected, no matter which element you apply addEventListener() to.
 */
+
+// Let's associate our click event with removing a class and adding a new one to our view element
+  // Those are prexisting classes defined in our .css file
+view.addEventListener("click", (event) => {
+  view.classList.remove("darkblue");
+  view.classList.add("purple");
+}, true);
+
+// and we could get the same result by toggling the background color when clicking the view element
+  // if the class is already part of the list, it gets removed
+  // and if it's not in the classList, it gets added
+view.addEventListener("click", (event) => {
+  view.classList.toggle("darkblue");
+  view.classList.toggle("purple");
+}, true);
+
+// we could also change the class for the div element
+// but we couldn't use classes for changing the text of the h2 element
+h2.addEventListener("click", (e) => {
+  const myText = e.target.textContent;
+  myText === "Hello!" ? myText = "clicked" : "Hello!";
+});

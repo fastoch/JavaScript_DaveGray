@@ -119,3 +119,9 @@ h2.addEventListener("click", (e) => {
   const myText = e.target.textContent;
   myText === "Hello!" ? myText = "clicked" : "Hello!";
 });
+
+// another event listener example
+const nav = document.querySelector("nav");
+nav.addEventListener("mouseover", (event) => {
+  event.target.classList.add("height100");
+});

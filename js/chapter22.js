@@ -68,60 +68,76 @@ When useCapture is set to true, the event listener is triggered during the captu
 This means the event is captured and handled by the OUTERMOST element first, then propagated to the inner elements until it reaches its target.
 */
 
-view.addEventListener("click", (event) => {
-  view.style.backgroundColor = "purple";
-}, true);
 
-div.addEventListener("click", (event) => {
-  div.style.backgroundColor = "blue";
-}, true);
+  // Let's write a few other event listeners that we could add to our initApp() function
 
-h2.addEventListener("click", (e) => {
-  e.target.textContent = "clicked";
-}, true);
+  view.addEventListener("click", (event) => {
+    view.style.backgroundColor = "purple";
+  }, true);
 
-// we can use the stopPropagation() function in the outermost element to prevent triggering inner events
-view.addEventListener("click", (event) => {
-  event.stopPropagation();
-  view.style.backgroundColor = "purple";
-}, true);  // with useCapture set to true, the propagation happens inwards (towards the innermost element)
+  div.addEventListener("click", (event) => {
+    div.style.backgroundColor = "blue";
+  }, true);
 
-// or we can use the stopPropagation() function in the innermost element to prevent triggering outer events
-h2.addEventListener("click", (e) => {
-  e.stopPropagation();
-  e.target.textContent = "clicked";
-});  // notice that useCapture is not passed, meaning it's set to false, so the propagation happens outwards
+  h2.addEventListener("click", (e) => {
+    e.target.textContent = "clicked";
+  }, true);
+
+  // we can use the stopPropagation() function in the outermost element to prevent triggering inner events
+  view.addEventListener("click", (event) => {
+    event.stopPropagation();
+    view.style.backgroundColor = "purple";
+  }, true);  // with useCapture set to true, the propagation happens inwards (towards the innermost element)
+
+  // or we can use the stopPropagation() function in the innermost element to prevent triggering outer events
+  h2.addEventListener("click", (e) => {
+    e.stopPropagation();
+    e.target.textContent = "clicked";
+  });  // notice that useCapture is not passed, meaning it's set to false, so the propagation happens outwards
 
 
-/*
-Notice how we used event.target for the h2 element, but we didn't do the same for the div and the view.
-When using event.target, only the actual event target gets affected, no matter which element you apply addEventListener() to.
-*/
+  /*
+  Notice how we used event.target for the h2 element, but we didn't do the same for the div and the view.
+  When using event.target, only the actual event target gets affected, no matter which element you apply addEventListener() to.
+  */
 
-// Let's associate our click event with removing a class and adding a new one to our view element
-  // Those are prexisting classes defined in our .css file
-view.addEventListener("click", (event) => {
-  view.classList.remove("darkblue");
-  view.classList.add("purple");
-}, true);
+  // Let's associate our click event with removing a class and adding a new one to our view element
+    // Those are prexisting classes defined in our .css file
+  view.addEventListener("click", (event) => {
+    view.classList.remove("darkblue");
+    view.classList.add("purple");
+  }, true);
 
-// and we could get the same result by toggling the background color when clicking the view element
-  // if the class is already part of the list, it gets removed
-  // and if it's not in the classList, it gets added
-view.addEventListener("click", (event) => {
-  view.classList.toggle("darkblue");
-  view.classList.toggle("purple");
-}, true);
+  // and we could get the same result by toggling the background color when clicking the view element
+    // if the class is already part of the list, it gets removed
+    // and if it's not in the classList, it gets added
+  view.addEventListener("click", (event) => {
+    view.classList.toggle("darkblue");
+    view.classList.toggle("purple");
+  }, true);
 
-// we could also change the class for the div element
-// but we couldn't use classes for changing the text of the h2 element
-h2.addEventListener("click", (e) => {
-  const myText = e.target.textContent;
-  myText === "Hello!" ? myText = "clicked" : "Hello!";
-});
+  // we could also change the class for the div element
+  // but we couldn't use classes for changing the text of the h2 element
+  h2.addEventListener("click", (e) => {
+    const myText = e.target.textContent;
+    myText === "Hello!" ? myText = "clicked" : "Hello!";
+  });
 
-// another event listener example
-const nav = document.querySelector("nav");
-nav.addEventListener("mouseover", (event) => {
-  event.target.classList.add("height100");
-});
+  // another event listener example
+  const nav = document.querySelector("nav");
+  nav.addEventListener("mouseover", (event) => {
+    event.target.classList.add("height100");
+  });
+  // to toggle between large navbar and slim navbar depending on the pointer position
+  nav.addEventListener("mouseout", (event) => {
+    event.target.classList.remove("height100");
+  });
+
+
+  // Now let's see how to handle events with forms 
+  // The following event listeners would also be part of our initApp() function (hence the indentation)
+  const view3 = document.querySelector("#view3");
+  const myForm = view3.querySelector("#myForm");
+  myForm.addEventListener("submit", (event) => {
+    console.log("submit event");
+  });

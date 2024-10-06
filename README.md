@@ -401,10 +401,10 @@ see `chapter22.js`
 
 ---
 
-# Chapter 23 - 
+# Chapter 23 - Web Storage API
 
 see `chapter23.js`
 
 ---
 
-@320/475min (67%)
+@322/475min (67%)

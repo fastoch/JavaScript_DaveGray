@@ -28,3 +28,5 @@ Which is why we use the JSON format to store our data within the Web storage API
 sessionStorage.setItem("mySessionStorage", JSON.stringify(myObject)); // convert my object to a string
 const mySessionData = JSON.parse(sessionStorage.getItem("mySessionStorage")); // make it an object again
 console.log(mySessionData);
+
+// Of course, JSON does lose the method declared within our object, like we've seen in chapter 19

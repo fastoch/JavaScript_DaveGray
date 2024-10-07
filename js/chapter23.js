@@ -9,16 +9,22 @@ alert("Hello!"); // implicit reference
 
 const myObject = {
   name: "fastoch",
+  hobbies: ["eat", "sleep", "code"],
   logName: function() {
     console.log(this.name);
   }
 }
 
-const myArray = ['eat','sleep','code'];
+myObject.logName(); // just testing the logName method
 
-myObject.logName();
+// Session storage = data is accessible only while logged in to the website
+// Local storage = data remains accessible after closing the web browser
 
-// Session storage = 
-// Local storage = 
+/* IMPORTANT! 
+Both session storage and local storage only store string data
+Which is why we use the JSON format to store our data within the Web storage API
+*/
 
-sessionStorage.setItem("myStorage", myObject);
+sessionStorage.setItem("mySessionStorage", JSON.stringify(myObject)); // convert my object to a string
+const mySessionData = JSON.parse(sessionStorage.getItem("mySessionStorage")); // make it an object again
+console.log(mySessionData);

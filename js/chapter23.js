@@ -25,7 +25,7 @@ Both session storage and local storage only store string data
 Which is why we use the JSON format to store our data within the Web storage API
 */
 
-sessionStorage.setItem("mySessionStorage", JSON.stringify(myObject)); // convert my object to a string
+sessionStorage.setItem("mySessionStorage", JSON.stringify(myObject)); // store myObject as a string
 const mySessionData = JSON.parse(sessionStorage.getItem("mySessionStorage")); // make it an object again
 console.log(mySessionData);
 
@@ -34,8 +34,27 @@ console.log(mySessionData);
 
 // Now we can do the same but making the data persistent this time
 localStorage.setItem("myLocalStorage", JSON.stringify(myObject)); 
-const myLocalData = JSON.parse(localStorage.getItem("myLocalStorage")); 
+let myLocalData = JSON.parse(localStorage.getItem("myLocalStorage")); 
 console.log(myLocalData);
 
 // now, if we close the browser and reopen it, the session storage is empty whereas the local storage data is still there
 // to access both storage types, open the Chrome dev tools and select the Application tab > Storage
+
+
+// Let's cover a few more methods & properties related to the Web storage API
+
+// to remove an item via its name
+localStorage.removeItem("myLocalStorage");
+myLocalData = JSON.parse(localStorage.getItem("myLocalStorae"));
+console.log(myLocalData); // null
+
+// to clear all of the local storage
+localStorage.clear();
+
+// to select an item via its position 
+const firstItem = localStorage.key(0); // the key is the name of the stored item
+console.log(firstItem);
+
+// to get the number of items available in my storage
+ 
+

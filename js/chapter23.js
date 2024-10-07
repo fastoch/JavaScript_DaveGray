@@ -30,3 +30,12 @@ const mySessionData = JSON.parse(sessionStorage.getItem("mySessionStorage")); //
 console.log(mySessionData);
 
 // Of course, JSON does lose the method declared within our object, like we've seen in chapter 19
+
+
+// Now we can do the same but making the data persistent this time
+localStorage.setItem("myLocalStorage", JSON.stringify(myObject)); 
+const myLocalData = JSON.parse(localStorage.getItem("myLocalStorage")); 
+console.log(myLocalData);
+
+// now, if we close the browser and reopen it, the session storage is empty whereas the local storage data is still there
+// to access both storage types, open the Chrome dev tools and select the Application tab > Storage

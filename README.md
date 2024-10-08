@@ -413,4 +413,28 @@ see `chapter24.js`
 
 ---
 
-@340/475min (71%)
+# Chapter 25 - 
+
+see `chapter25.js`
+
+---
+
+# Chapter 26 - 
+
+see `chapter26.js`
+
+---
+
+# Chapter 27 - 
+
+see `chapter27.js`
+
+---
+
+# Chapter 28 - 
+
+see `chapter28.js`
+
+---
+
+@345/475min (72%)

@@ -25,6 +25,8 @@ Both session storage and local storage only store string data
 Which is why we use the JSON format to store our data within the Web storage API
 */
 
+// in both local storage & session storage, each item is stored as a (key, value) pair
+
 sessionStorage.setItem("mySessionStorage", JSON.stringify(myObject)); // store myObject as a string
 const mySessionData = JSON.parse(sessionStorage.getItem("mySessionStorage")); // make it an object again
 console.log(mySessionData);
@@ -45,16 +47,16 @@ console.log(myLocalData);
 
 // to remove an item via its name
 localStorage.removeItem("myLocalStorage");
-myLocalData = JSON.parse(localStorage.getItem("myLocalStorae"));
+myLocalData = JSON.parse(localStorage.getItem("myLocalStorage"));
 console.log(myLocalData); // null
 
 // to clear all of the local storage
 localStorage.clear();
 
 // to select an item via its position 
-const firstItem = localStorage.key(0); // the key is the name of the stored item
+const firstItem = localStorage.key(0); // the key is the name of the storage
 console.log(firstItem);
 
 // to get the number of items available in my storage
- 
-
+let storageLength = localStorage.length;
+console.log(storageLength);

@@ -407,4 +407,10 @@ see `chapter23.js`
 
 ---
 
-@338/475min (71%)
+# Chapter 24 - Modules
+
+see `chapter24.js`
+
+---
+
+@340/475min (71%)

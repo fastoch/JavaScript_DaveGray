@@ -413,7 +413,7 @@ see `chapter24.js`
 
 ---
 
-# Chapter 25 - 
+# Chapter 25 - Higher Order Functions
 
 see `chapter25.js`
 
@@ -437,4 +437,4 @@ see `chapter28.js`
 
 ---
 
-@350/475min (73%)
+@355/475min (74%)

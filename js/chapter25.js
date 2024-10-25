@@ -33,7 +33,7 @@ console.log(mappedPosts); // [310, 320, 330, 340, 350, 360, 370, ...]
 const reducedPostsValue = mappedPosts.reduce((sum, post) => {
   return sum + post;
 });
-console.log(reducedPostsValue);
+console.log(reducedPostsValue); // 3550
 
 
 // forEach(), filter(), map(), and reduce() are examples of Higher Order Functions

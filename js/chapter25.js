@@ -14,16 +14,27 @@ posts.forEach((post) => {
 
 console.clear();
 
+
 // Return only posts where the userId is equal to 4
 const filteredPosts = posts.filter((post) => {
   return post.userId === 4;
 });
-
 console.log(filteredPosts);
 
-console.clear();
 
-// 
-const mapped = 
+// for each object in filteredPosts, return the id multiplied by 10
+const mappedPosts = filteredPosts.map((post) => {
+  return post.id * 10;
+});
+console.log(mappedPosts); // [310, 320, 330, 340, 350, 360, 370, ...]
 
-// forEach(), filter(), and map() are examples of Higher Order Functions
+
+// return the sum of all items in mappedPosts
+const reducedPostsValue = mappedPosts.reduce((sum, post) => {
+  return sum + post;
+});
+console.log(reducedPostsValue);
+
+
+// forEach(), filter(), map(), and reduce() are examples of Higher Order Functions
+// reduce() is different because it uses something called an "accumulator"

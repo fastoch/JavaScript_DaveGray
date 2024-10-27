@@ -3,9 +3,9 @@
 /* 
 Fetch API requires a discussion of:
 - Callbacks
-- Promises 
+- Promises (replace Callbacks)
 - Thenables
-- Async/Await
+- Async/Await (replace Thenables)
 */
 
 
@@ -38,11 +38,39 @@ Nowadays, we don't use callbacks anymore, but you probably could find callbacks
 in some legacy code written before promises existed.
 */
 
-// Promises can have 3 states: Pending, Fulfilled, Rejected
+// Promises can have 3 states: Pending, Fulfilled, and Rejected
 /*
 Promises deliver ASYNC code (asynchronous).
-While JavaScript is usually SYNCHRONOUS, meaning doing one thing at a time.
-
-
+While JavaScript (JS) is usually SYNCHRONOUS, meaning doing one thing at a time.
+A promise could be pending while some other JS code goes ahead and executes.
 */
+
+const myPromise = new Promise((resolve, reject) => {
+  const error = false;
+  if (!error) {
+    resolve("Promise resolved!");
+  } else {
+    reject("Promise rejected!");
+  }
+});
+
+console.log(myPromise); // Promise {<fulfilled>: "Promise resolved!"}
+// The above show the state of the promise, not its value
+
+// To get the value out of a promise, we need to use THENABLES
+// Thenables attach callbacks for the resolution and/or rejection of the Promise
+
+myPromise
+// executes only if the Promise is fulfilled
+.then(value => {
+  console.log(value); // "Promise resolved!"
+})
+// executes only if the Promise is rejected 
+.catch(err => {
+  console.log(err); // "Promise rejected!"
+})
+
+// Actually, the Fetch API returns a Promise on its own, we don't have to create a new Promise
+
+// ASYNC/AWAIT replace the Thenables 
 

@@ -419,7 +419,7 @@ see `chapter25.js`
 
 ---
 
-# Chapter 26 - 
+# Chapter 26 - Fetch / Async / Await
 
 see `chapter26.js`
 
@@ -437,4 +437,4 @@ see `chapter28.js`
 
 ---
 
-@365/475min (76%)
+@367/475min (77%)

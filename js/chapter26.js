@@ -91,7 +91,7 @@ myNextPromise.then(value => {
   console.log(value);
 });
 
-// calling myPromise for the second time (except this will execute before the call to myNextPromise)
+// calling myPromise for the second time, except this will execute before the call to myNextPromise
 myPromise.then(value => {
   console.log(value);
 });
@@ -99,7 +99,31 @@ myPromise.then(value => {
 // The above example shows that JS really doesn't wait, it's not built into waiting.
 
 // Now let's see an example of the third state of a Promise = pending
+const users = fetch("https://jsonplaceholder.typicode.com/users");
+console.log(users); // shows the Promise status = Promise {<pending>}
 
+// we could place the above line after the following fetch function, and it would still show the Promise status before showing the data
+// because JavaScript
+
+fetch("https://jsonplaceholder.typicode.com/users")
+  .then(response => {
+    console.log(response); // ReadableStream (not JSON yet)
+    return response.json(); // convert ReadableStream to JSON data
+  })
+  .then(JSONdata => {
+    console.log(JSONdata); // shows an array containing 10 objects (the users & all their related information)
+    JSONdata.forEach(user => {
+      console.log(user);
+    });
+  });
+
+/* 
+What we've done is:
+- grab the data from the API with fetch
+- then convert it to json format
+- then log it to the console 
+- then run a forEach loop to log each object individually
+*/
 
 
 // ASYNC/AWAIT replace the Thenables 

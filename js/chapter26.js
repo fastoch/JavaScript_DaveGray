@@ -1,4 +1,4 @@
-// Fetch / Async / Await
+// Promises / Fetch / Async & Await
 
 /* 
 Fetch API requires a discussion of:
@@ -102,8 +102,11 @@ myPromise.then(value => {
 const users = fetch("https://jsonplaceholder.typicode.com/users");
 console.log(users); // shows the Promise status = Promise {<pending>}
 
-// we could place the above line after the following fetch function, and it would still show the Promise status before showing the data
-// because JavaScript
+/* we could place the above line after the following fetch function, 
+and it would still show the Promise status before showing the fetcheddata
+because JavaScript does not wait until the fetch Promise resolution
+it executes all the code till the end of file, except if you use setTimeout()
+*/
 
 fetch("https://jsonplaceholder.typicode.com/users")
   .then(response => {
@@ -126,5 +129,12 @@ What we've done is:
 */
 
 
-// ASYNC/AWAIT replace the Thenables 
+// Instead of chaining Thenables like we did above, we can now use Async & Await
 
+const myUsers = {
+  userList: []
+};
+
+const myCoolFunction = async () => {
+
+}

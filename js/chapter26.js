@@ -39,6 +39,7 @@ in some legacy code written before promises existed.
 */
 
 // Promises can have 3 states: Pending, Fulfilled, and Rejected
+
 /*
 Promises deliver ASYNC code (asynchronous).
 While JavaScript (JS) is usually SYNCHRONOUS, meaning doing one thing at a time.
@@ -70,7 +71,36 @@ myPromise
   console.log(err); // "Promise rejected!"
 })
 
-// Actually, the Fetch API returns a Promise on its own, we don't have to create a new Promise
+// IMPORTANT: the Fetch API returns a Promise on its own, we don't have to create a new Promise
+
+/*
+When requesting data from another server, we need to wait for that data to arrive.
+So we need to tell our code: "Wait for this data, and then do this after you get it."
+Hence the need to use Promises, so part of our code can wait until required data allows it to execute.
+*/
+
+// One way to simulate how Fetch works is to use a timeout to delay the execution of some code
+const myNextPromise = new Promise((resolve, reject) => {
+  setTimeout(function() {
+    resolve("myNextPromise resolved after a 3s timeout!");
+  }, 3000);
+});
+
+// calling myNextPromise first
+myNextPromise.then(value => {
+  console.log(value);
+});
+
+// calling myPromise for the second time (except this will execute before the call to myNextPromise)
+myPromise.then(value => {
+  console.log(value);
+});
+
+// The above example shows that JS really doesn't wait, it's not built into waiting.
+
+// Now let's see an example of the third state of a Promise = pending
+
+
 
 // ASYNC/AWAIT replace the Thenables 
 

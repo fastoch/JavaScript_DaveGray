@@ -135,6 +135,23 @@ const myUsers = {
   userList: []
 };
 
+// just declaring an arrow function as usual but adding the "async" keyword
 const myCoolFunction = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users"); 
+  const jsonUserData = await response.json();
+  console.log(jsonUserData);
+  return jsonUserData;
+};
 
-}
+// The "await" keyword tells JS to wait for completion of the current task before executing the next instruction
+
+myCoolFunction();
+
+// now let's make another function that fills the myUsers object with the data returned by myCoolFunction()
+const anotherFunction = async () => {
+  const data = await myCoolFunction();
+  myUsers.userList = data;
+  console.log(myUsers.userList);
+};
+
+anotherFunction();

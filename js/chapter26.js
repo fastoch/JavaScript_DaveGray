@@ -147,7 +147,7 @@ const myCoolFunction = async () => {
 
 myCoolFunction();
 
-// now let's make another function that fills the myUsers object with the data returned by myCoolFunction()
+// now let's make a function that feeds myUsers with the data returned by myCoolFunction()
 const anotherFunction = async () => {
   const data = await myCoolFunction();
   myUsers.userList = data;

@@ -171,14 +171,38 @@ const getAllUserEmails = async () => {
     return user.email;
   });
 
-  // log the result to the console
-  console.log(userEmailArray);
-
   postToWebPage(userEmailArray);
 };
 
-getAllUserEmails(); // call our workflow function
-
-const postToWebPage = () => {
-
+const postToWebPage = (data) => {
+  console.log(data);
 };
+
+getAllUserEmails(); // calling our workflow function
+
+
+// Example 2: 2nd parameter of fetch() is an object
+const getDadJoke = async () => {
+
+  const data = await fetch("https://icanhazdadjoke.com", {
+    method: "GET",
+    headers: {
+      Accept: "application/json"
+    }
+  });
+
+  const jsonJokeData = await data.json();
+
+  console.log(jsonJokeData);
+  console.log(jsonJokeData.joke);
+}
+
+getDadJoke();
+
+/* 
+In this second example, we pass a 2nd parameter to fetch() so we can:
+- define the HTTP request method
+- set the 'Accept' header to "application/json" 
+This header is used to inform the server about the types of content the client can process.
+It tells the server that the client prefers to receive JSON data in response.
+*/

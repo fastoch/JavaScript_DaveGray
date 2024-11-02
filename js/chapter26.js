@@ -155,3 +155,30 @@ const anotherFunction = async () => {
 };
 
 anotherFunction();
+
+
+// Let's see some examples to clarify the use of async & await
+
+// Example 1: Workflow function
+const getAllUserEmails = async () => {
+  // request the data and wait for it to arrive
+  const readableStream = await fetch("https://jsonplaceholder.typicode.com/users"); 
+  // once it has arrived, convert it to JSON format
+  const jsonData = await readableStream.json();
+  
+  // once you have json data, use map() to make an array with all user emails
+  const userEmailArray = jsonData.map(user => {
+    return user.email;
+  });
+
+  // log the result to the console
+  console.log(userEmailArray);
+
+  postToWebPage(userEmailArray);
+};
+
+getAllUserEmails(); // call our workflow function
+
+const postToWebPage = () => {
+
+};

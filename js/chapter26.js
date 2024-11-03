@@ -217,7 +217,14 @@ const jokeObject = {
 }
 
 const postDadJoke = async (jokeObj) => {
+  const response = await fetch("https://httpbin.org/post", {
+    method: "POST",
+    Accept: "application/json"
+  });
 
+  const jsonJokeData = await response.json();
+
+  console.log(jsonJokeData);
 }
 
 postDadJoke();

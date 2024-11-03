@@ -205,4 +205,19 @@ In this second example, we pass a 2nd parameter to fetch() so we can:
 - set the 'Accept' header to "application/json" 
 This header is used to inform the server about the types of content the client can process.
 It tells the server that the client prefers to receive JSON data in response.
+By defining what type of data we accept from an API, it changes what this API delivers.
+We could have set 'Accept' to "text/plain" and then use the .text() method instead of .json()
 */
+
+// Now, let's post data to the API
+
+const jokeObject = {
+  id: "B5h311TS7h",
+  joke: "I couldn't figure out how the seat belt worked. Then it just clicked."
+}
+
+const postDadJoke = async (jokeObj) => {
+
+}
+
+postDadJoke();

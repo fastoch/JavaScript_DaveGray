@@ -1,4 +1,5 @@
-// Promises / Fetch / Async & Await
+
+// Promises / Fetch / Async & Await - Most important chapter of this course
 
 /* 
 Fetch API requires a discussion of:
@@ -209,7 +210,8 @@ By defining what type of data we accept from an API, it changes what this API de
 We could have set 'Accept' to "text/plain" and then use the .text() method instead of .json()
 */
 
-// Now, let's post data to the API
+
+// Now, let's POST data to the API
 
 const jokeObject = {
   id: "B5h311TS7h",
@@ -219,12 +221,15 @@ const jokeObject = {
 const postDadJoke = async (jokeObj) => {
   const response = await fetch("https://httpbin.org/post", {
     method: "POST",
-    Accept: "application/json"
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(jokeObj)
   });
 
-  const jsonJokeData = await response.json();
-
-  console.log(jsonJokeData);
+  const jsonResponse = await response.json();
+  console.log(jsonResponse);
+  console.log(jsonResponse.headers);
 }
 
-postDadJoke();
+postDadJoke(jokeObject);

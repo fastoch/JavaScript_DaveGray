@@ -233,3 +233,16 @@ const postDadJoke = async (jokeObj) => {
 }
 
 postDadJoke(jokeObject);
+
+
+// We can also pass data in through the URL (within a GET request of course)
+const requestSpecificJoke = async (firstName, lastName)=> {
+  const response = await fetch(`https://api.icndb.com/jokes/random?firstName=${firstName}&lastName=${lastName}`);
+  const jsonResponse = await response.json();
+  console.log(jsonResponse.value);
+  console.log(jsonResponse.value.joke);
+}
+// This URL we use is the internet Chuck Norris database (icndb)
+// The parameters insertion starts at the question mark, and the ampersand (&) allows us to chain parameters 
+
+requestSpecificJoke("Clint", "Eastwood");

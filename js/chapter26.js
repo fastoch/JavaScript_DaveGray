@@ -246,3 +246,21 @@ const requestSpecificJoke = async (firstName, lastName)=> {
 // The parameters insertion starts at the question mark, and the ampersand (&) allows us to chain parameters 
 
 requestSpecificJoke("Clint", "Eastwood");
+
+
+// let's abstract the previous concepts into functions
+
+// function that gets data from a form based on the submit event or something like that 
+const getDataFromForm = () => {
+  const requestObj = {
+    firstName: "Bruce", 
+    lastName: "Lee",
+    categories: ["nerdy"]
+  };
+  return requestObj;
+}
+
+// function that
+const buildRequestUrl = () => {
+
+}

@@ -425,7 +425,7 @@ see `chapter26.js`
 
 ---
 
-# Chapter 27 - 
+# Chapter 27 - Regular Expressions (RegEx)
 
 see `chapter27.js`
 
@@ -437,4 +437,4 @@ see `chapter28.js`
 
 ---
 
-@423/475min (89%)
+@425/475min (89%)

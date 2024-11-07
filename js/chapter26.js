@@ -248,9 +248,9 @@ const requestSpecificJoke = async (firstName, lastName)=> {
 requestSpecificJoke("Clint", "Eastwood");
 
 
-// let's abstract the previous concepts into functions
+// Let's abstract the previous concepts into functions
 
-// function that gets data from a form based on the submit event or something like that 
+// function that gets data from a form based on a submit event or something similar
 const getDataFromForm = () => {
   const requestObj = {
     firstName: "Bruce", 
@@ -261,6 +261,6 @@ const getDataFromForm = () => {
 }
 
 // function that
-const buildRequestUrl = () => {
-
+const buildRequestUrl = (requestData) => {
+  return `https://api.icndb.com/jokes/random?firstName=${requestData.firstName}&lastName=${requestData.lastName}&limitTo=${requestData.categories}`;
 }

@@ -250,7 +250,7 @@ requestSpecificJoke("Clint", "Eastwood");
 
 // Let's abstract the previous concepts into functions
 
-// function that GETS DATA from a form based on a submit event or something similar
+// function that GETS DATA from a form, based on a submit event 
 const getDataFromForm = () => {
   const requestObj = {
     firstName: "Bruce", 
@@ -262,13 +262,30 @@ const getDataFromForm = () => {
 
 // function that BUILDS THE REQUEST URL from the submitted data
 const buildRequestUrl = (requestData) => {
-  return `https://api.icndb.com/jokes/random?firstName=${requestData.firstName}&lastName=${requestData.lastName}&limitTo=${requestData.categories}`;
+  return `https://api.icndb.com/jokes/random
+  ?firstName=${requestData.firstName}
+  &lastName=${requestData.lastName}
+  &limitTo=${requestData.categories}`;
 }
 
 // function that SENDS THE REQUEST to get a joke that matches provided values (firstName, lastName and categories)
-const jokeRequest = async (url) => {
+const requestJoke = async (url) => {
   const response = await fetch(url);
   const jsonResponse = await response.json();
-  const jokeObj = jsonResponse.value;
-  
+  const joke = jsonResponse.value.joke;
+  postJokeToPage(joke);
 }
+
+const postJokeToPage = (joke) => {
+  console.log(joke);
+}
+
+// Now we need a procedural "workflow" function that would be triggered on form submit
+const processJokeRequest = async () => {
+  const requestData = getDataFromForm();
+  const requestUrl = buildRequestUrl(requestData);
+  await requestJoke(requestUrl);
+  console.log("finished!");
+}
+
+processJokeRequest();

@@ -427,8 +427,6 @@ see `chapter26.js`
 
 # Chapter 27 - Regular Expressions (RegEx)
 
-see `chapter27.js`
-
 ---
 
 # Chapter 28 - 

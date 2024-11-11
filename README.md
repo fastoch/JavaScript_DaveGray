@@ -427,6 +427,42 @@ see `chapter26.js`
 
 # Chapter 27 - Regular Expressions (RegEx)
 
+We will use the https://regexr.com website for this chapter.  
+
+## Character sets
+
+### Selective character set
+
+`/[exm]/g` will match every e, x, or m within the provided text.  
+
+The slashes delimit the regular expression.  
+
+The g flag stands for 'global' search, which means 'find every match in that text'.  
+If we omit the g flag, the search will only return the first match.  
+
+We could also use the i flag, which stands for 'case insensitive'.
+
+### Negated character set
+
+`/[^exm]/g` will match any character except those 3 letters.  
+
+### Range selection
+
+You can specify a range within brackets:  
+`/[e-s]/g` will match any lowercase character from e to s.  
+`/[E-S]/g` will match any uppercase character from E to S.  
+
+We could also select a range of numbers: `/[2-8]/g`
+
+## Special characters
+
+- A simple dot matches everything except the 'new line' character: `/./g`  
+- To select 'new line' characters: `/\n/g` or `/\r/g` on some operating systems.
+- The 'word' character selects all letters + numbers + underscore: `/\w/g`
+- To select anything but word characters: `/\W/g` (this includes apostrophes, spaces, hyphens)
+- 
+
+
 ---
 
 # Chapter 28 - 

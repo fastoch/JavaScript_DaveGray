@@ -437,10 +437,12 @@ We will use the https://regexr.com website for this chapter.
 
 The slashes delimit the regular expression.  
 
-The g flag stands for 'global' search, which means 'find every match in that text'.  
+The `g` flag stands for 'global' search, which means 'find every match in that text'.  
 If we omit the g flag, the search will only return the first match.  
 
-We could also use the i flag, which stands for 'case insensitive'.
+We could also use the `i` flag, which stands for 'case insensitive'.  
+
+The `m` flag allows to select **multiline** occurrences of a pattern.
 
 ### Negated character set
 
@@ -456,12 +458,31 @@ We could also select a range of numbers: `/[2-8]/g`
 
 ## Special characters
 
-- A simple dot matches everything except the 'new line' character: `/./g`  
-- To select 'new line' characters: `/\n/g` or `/\r/g` on some operating systems.
+- A simple dot matches everything except the 'newline' character: `/./g`  
+- To select 'newline' characters: `/\n/g` or `/\r/g` on some operating systems.
 - The 'word' character selects all letters + numbers + underscore: `/\w/g`
 - To select anything but word characters: `/\W/g` (this includes apostrophes, spaces, hyphens)
-- 
+- To select digits: `/\d/g`
+- To select everything but the digits: `/\D/g`
+- To select whitespace characters: `/\s/g` (includes space, tab, newline `\n`, carriage return `\r`)
+- To select everything but whitespace characters: `/\S/g`
+- To select everything including line breaks: `/[\S\s]/g`
 
+## Anchors
+
+- `/^I/g` matches the first occurrence of 'I' that starts a line  
+- `/^I/gm` matches all occurrences of 'I' that start a line
+- `/d$/gm` matches all occurrences of 'd' that end a line
+
+## Escaped characters
+
+Some special characters require to be escaped. 
+- to select a dot (period), we must escape it with a backslash: `/\./g` 
+
+## Capture group
+
+- to select all occurrences of the string 'old': `/(old)/gm`
+- 
 
 ---
 
@@ -471,4 +492,4 @@ see `chapter28.js`
 
 ---
 
-@435/475min (91%)
+@438/475min (92%)

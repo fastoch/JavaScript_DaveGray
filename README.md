@@ -488,9 +488,15 @@ Some special characters require to be escaped.
 
 ## Quantifiers
 
-- to select words starting with a capital letter: `/[A-Z]\w+/gm`
-  - without the + sign, this would only select the first two letters 
-  - the + quantifier means "match 1 or more of the preceding token
+- to select words starting with a capital letter followed by 1 or more word characters: `/[A-Z]\w+/gm`
+  - without the `+` sign, this would only select the first two characters 
+  - the `+` quantifier means "match 1 or more of the preceding token"
+  - the `*` quantifier means "match 0 or more of the preceding token"
+- to select all words that start with a capital letter and include an apostrophe: `/[A-Z][a-z]*'[a-z]+/gm`
+- to specify a precise quantity of some character: `/\d{3}/gm`
+  - the above pattern will select all groups of 3 digits
+- to select groups of 3 digits or more: `/\d{3,}/gm`
+- to select groups of 3 or 4 digits: `/\d{3,4}/gm`
 
 ---
 
@@ -500,4 +506,4 @@ see `chapter28.js`
 
 ---
 
-@7h20 
+@7h23 

@@ -460,7 +460,7 @@ We could also select a range of numbers: `/[2-8]/g`
 
 - A simple dot matches everything except the 'newline' character: `/./g`  
 - To select 'newline' characters: `/\n/g` or `/\r/g` on some operating systems.
-- The 'word' character selects all letters + numbers + underscore: `/\w/g`
+- The 'word' character selects any letter or number or underscore: `/\w/g`
 - To select anything but word characters: `/\W/g` (this includes apostrophes, spaces, hyphens)
 - To select digits: `/\d/g`
 - To select everything but the digits: `/\D/g`
@@ -479,10 +479,18 @@ We could also select a range of numbers: `/[2-8]/g`
 Some special characters require to be escaped. 
 - to select a dot (period), we must escape it with a backslash: `/\./g` 
 
-## Capture group
+## Capture groups
 
 - to select all occurrences of the string 'old': `/(old)/gm`
-- 
+- to specify a non-capturing group: `/(?:old)/gm` (selects but does not capture)
+- to select the letter g when followed by 'old': `/g(?=old)/gm` (= positive lookahead)
+- to select the letter g when not followed by old: `/g(?!old)/gm` (= negative lookahead)
+
+## Quantifiers
+
+- to select words starting with a capital letter: `/[A-Z]\w+/gm`
+  - without the + sign, this would only select the first two letters 
+  - the + quantifier means "match 1 or more of the preceding token
 
 ---
 
@@ -492,4 +500,4 @@ see `chapter28.js`
 
 ---
 
-@438/475min (92%)
+@7h20 

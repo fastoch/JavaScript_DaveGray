@@ -464,7 +464,7 @@ We could also select a range of numbers: `/[2-8]/g`
 - To select anything but word characters: `/\W/g` (this includes apostrophes, spaces, hyphens)
 - To select digits: `/\d/g`
 - To select everything but the digits: `/\D/g`
-- To select whitespace characters: `/\s/g` (includes space, tab, newline `\n`, carriage return `\r`)
+- To select **whitespace** characters: `/\s/g` (includes space, tab, newline `\n`, carriage return `\r`)
 - To select everything but whitespace characters: `/\S/g`
 - To select everything including line breaks: `/[\S\s]/g`
 
@@ -497,6 +497,27 @@ Some special characters require to be escaped.
   - the above pattern will select all groups of 3 digits
 - to select groups of 3 digits or more: `/\d{3,}/gm`
 - to select groups of 3 or 4 digits: `/\d{3,4}/gm`
+- to select all 't' characters and all 'heart' strings: `/(hear)?t/gm`
+  - in the above pattern, `?` makes the (hear) capturing group **optional**
+- but the question mark can also be used as a **lazy selector**
+  - to select all words that start with a lowercase h: `/h\w+/gm`
+  - the above pattern is called a **greedy selection** as it selects all the word characters after the letter h
+  - **greedy selection** is the default behavior
+  - to make a lazy selection and select only the h letter + 1 word character: `/h\w+?/gm`
+- to select all occurrences of 'live' and 'give': `/(g|l)ive/gm`
+
+## Examples
+
+### Example 1
+
+In the US, zip codes can contain 5 digits or 5 digits + 4 digits separated by an hyphen. Like 10001 or 10001-1234.  
+ - To select groups of 5 digits: `/\d{5}/gm`
+ - to select groups of 5 digits that might be followed by an hyphen: `/\d{5}-?/gm`
+ - to select any zip code, we need to make both the hyphen and the group of 4 digits: `/\d{5}-?(\d{4})?/gm` 
+
+### Example 2
+
+
 
 ---
 
@@ -506,4 +527,4 @@ see `chapter28.js`
 
 ---
 
-@7h23 
+@7h30

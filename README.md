@@ -479,6 +479,8 @@ We could also select a range of numbers: `/[2-8]/g`
 Some special characters require to be escaped. 
 - to select a dot (period), we must escape it with a backslash: `/\./g` 
 
+**Important note**: most special don't need to be escaped with a \ inside of a character set `[]`
+
 ## Capture groups
 
 - to select all occurrences of the string 'old': `/(old)/gm`
@@ -508,23 +510,35 @@ Some special characters require to be escaped.
 
 ## Examples
 
-### Example 1
+### Example 1 - zip codes
 
 In the US, zip codes can contain 5 digits or 5 digits + 4 digits separated by an hyphen. Like 10001 or 10001-1234.  
  - To select groups of 5 digits: `/\d{5}/gm`
  - to select groups of 5 digits that might be followed by an hyphen: `/\d{5}-?/gm`
- - to select any zip code, we need to make both the hyphen and the group of 4 digits: `/\d{5}-?(\d{4})?/gm` 
+ - to select any zip code, we need to make both the hyphen & the group of 4 digits optional: `/\d{5}-?(\d{4})?/gm` 
 
-### Example 2
+### Example 2 - superfluous whitespace characters
 
+To select superfluous whitespace characters between two words (more than 1 space): `/\s{2,}/gm`.  
 
+### Example 2 - phone numbers
+
+Phone numbers can be written in many different ways but should contain at least 7 digits:
+- 8675309
+- 867 5309
+- 867.5309
+- 867-5309
+- 555-867-5309
+- +1 555 867 5309
+
+To make sure we select all these phone numbers: `/[+]?(\d{1,2})?[-. ]?(\d{3})?[-. ]?(\d{3})[-. ]?(\d{4})/gm`
 
 ---
 
-# Chapter 28 - 
+# Chapter 28 - RegEx in JS
 
 see `chapter28.js`
 
 ---
 
-@7h30
+@7h40

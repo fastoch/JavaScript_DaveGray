@@ -25,7 +25,7 @@ document.getElementById("phoneNum").addEventListener("input", (event) => {
 // the goal is to give some feedback to the user while he's typing
 
 // if the user input is invalid, we change the text color to red and display an informative message
-// if the input field is empty, there's no informative message to tell the user their input is invalid
+// if the input field is empty, there's no informative message 
 // and if the input is valid, no message is diplayed and the text color turns black 
 
 // Now we've added an event listener to the input field (inside an html form), let's add an
@@ -33,4 +33,16 @@ document.getElementById("phoneNum").addEventListener("input", (event) => {
 document.getElementById("phoneForm").addEventListener("submit", (event) => {
   event.preventDefault(); // prevent the page from reloading on form submit
   const input = document.getElementById("phoneNum");
+  const regex = /[()-. ]/g; // defining a character set 
+  const savedPhoneNum = input.value.replaceAll(regex, ""); // removing extra characters
+  console.log(savedPhoneNum);
+});
+
+
+
+// One last practical example
+// We have a second form in a second section of our index.html file
+// This time we expect the user to enter some text
+document.getElementById("textForm").addEventListener("submit", (event) => {
+  
 });

@@ -31,7 +31,7 @@ document.getElementById("phoneNum").addEventListener("input", (event) => {
 // Now we've added an event listener to the input field (inside an html form), let's add an
 // event listener to the form itself
 document.getElementById("phoneForm").addEventListener("submit", (event) => {
-  event.preventDefault(); // prevent the page from reloading on form submit
+  event.preventDefault(); // prevents the page from reloading on form submit
   const input = document.getElementById("phoneNum");
   const regex = /[()-. ]/g; // defining a character set 
   const savedPhoneNum = input.value.replaceAll(regex, ""); // removing extra characters
@@ -44,5 +44,8 @@ document.getElementById("phoneForm").addEventListener("submit", (event) => {
 // We have a second form in a second section of our index.html file
 // This time we expect the user to enter some text
 document.getElementById("textForm").addEventListener("submit", (event) => {
-  
+  event.preventDefault();
+  const input = document.getElementById("textEntry");
+  const regex = / {2,}/g; // match occurrences of 2 spaces or more
+  const newText = input.value.replaceAll(regex, " ").trim(); // replace multiple spaces with one space, then remove spaces from both ends of the string
 });

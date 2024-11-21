@@ -35,7 +35,7 @@ document.getElementById("phoneForm").addEventListener("submit", (event) => {
   const input = document.getElementById("phoneNum");
   const regex = /[()-. ]/g; // defining a character set 
   const savedPhoneNum = input.value.replaceAll(regex, ""); // removing extra characters
-  console.log(savedPhoneNum);
+  console.log(savedPhoneNum); 
 });
 
 
@@ -47,5 +47,13 @@ document.getElementById("textForm").addEventListener("submit", (event) => {
   event.preventDefault();
   const input = document.getElementById("textEntry");
   const regex = / {2,}/g; // match occurrences of 2 spaces or more
-  const newText = input.value.replaceAll(regex, " ").trim(); // replace multiple spaces with one space, then remove spaces from both ends of the string
+  const newText = input.value.replaceAll(regex, " ").trim(); 
+  // replaceAll() replaces multiple spaces with a single space 
+  // trim() removes spaces from the beginning and the end of our string
+  console.log(newText);
+
+  const encodedInputText = encodeURI(input.value);
+  const encodedCleanText = encodeURI(newText);
+  console.log(encodedInputText);
+  console.log(encodedCleanText);
 });

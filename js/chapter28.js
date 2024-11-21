@@ -54,6 +54,6 @@ document.getElementById("textForm").addEventListener("submit", (event) => {
 
   const encodedInputText = encodeURI(input.value);
   const encodedCleanText = encodeURI(newText);
-  console.log(encodedInputText);
-  console.log(encodedCleanText);
+  console.log(encodedInputText); // might contain extra spaces > cannot be inserted into an URL
+  console.log(encodedCleanText); // cleaned up text that can be inserted into an URL
 });
